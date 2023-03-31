@@ -174,6 +174,26 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
+						const count = (message.content.match(/?fucked? up/gmi) || []).length;
+
+						for (let i = 0; i < count; i++) {
+							this.playFuckedUp();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/h?oy?ah/gmi) || []).length;
+
+						for (let i = 0; i < count; i++) {
+							this.playHOYAH();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
 						const count = (message.content.match(/sigma/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
@@ -616,6 +636,16 @@ module.exports = (() => {
 
 				playNice() {
 					audio.src = "https://www.myinstants.com/media/sounds/nioce.mp3";
+					audio.play();
+				}
+
+				playFuckedUp() {
+					audio.src = "https://www.myinstants.com/media/sounds/it-was-at-this-moment-that-he-he-knew-he-f-cked-up_mIzVbMC.mp3";
+					audio.play();
+				}
+
+				playHOYAH() {
+					audio.src = "https://www.myinstants.com/media/sounds/hooyahh.mp3";
 					audio.play();
 				}
 
