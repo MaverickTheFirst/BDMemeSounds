@@ -15,7 +15,7 @@ module.exports = (() => {
 				discord_id: "845712972106039357",
 				github_username: "MaverickTheFirst"
 			}],
-			version: "1.0",
+			version: "1.4",
 			description: "When the plugin is enabled, meme sounds will play based on what is being sent in chat! Contains an extensive library of meme sounds.",
 			github: "https://github.com/MaverickTheFirst/BDMemeSounds/blob/main/MemeSoundsByMaverick.plugin.js",
 			github_raw: "https://raw.githubusercontent.com/MaverickTheFirst/BDMemeSounds/main/MemeSoundsByMaverick.plugin.js"
