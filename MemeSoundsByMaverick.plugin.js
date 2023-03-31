@@ -29,7 +29,7 @@ module.exports = (() => {
 			settings: [{
 				id: "onlyCur",
 				name: "Current channel only",
-				note: "MEME SOUNDS",
+				note: "MEME SOUNDS! BTW, "cancel" stops anything that is playing.",
 				type: "switch",
 				value: true
 			}, {
