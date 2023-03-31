@@ -194,7 +194,17 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/nope/gmi || /no/gmi) || []).length;
+						const count = (message.content.match(/nope/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playNope();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/no/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playNope();
@@ -214,7 +224,37 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/lol/gmi || /lmao/gmi || /😂/gmi || /😭/gmi) || []).length;
+						const count = (message.content.match(/lol/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playLol();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/lmao/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playLol();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/😂/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playLol();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/😭/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playLol();
@@ -244,7 +284,27 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/dead chat/gmi || /ded chat/gmi || /chat ded/gmi) || []).length;
+						const count = (message.content.match(/dead chat/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playCrickets();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/ded chat/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playCrickets();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/chat ded/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playCrickets();
@@ -264,6 +324,16 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
+						const count = (message.content.match(/🗿/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playVineBoom();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
 						const count = (message.content.match(/oof/gmi || /uff/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
@@ -274,7 +344,17 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/ah/gmi) || []).length;
+						const count = (message.content.match(/uff/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playOof();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/aaah/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playAH();
@@ -284,7 +364,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/shit/gmi || /sh*t/gmi) || []).length;
+						const count = (message.content.match(/shit/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playSHIT();
@@ -294,7 +374,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/🍦/gmi || /🍧/gmi || /🍨/gmi || /ice cream/gmi) || []).length;
+						const count = (message.content.match(/🍦/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playBC();
@@ -304,7 +384,67 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/ur ded/gmi || /i will send you to jesus/gmi || /youre ded/gmi || /you're ded/gmi) || []).length;
+						const count = (message.content.match(/🍧/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playBC();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/🍨/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playBC();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/ice cream/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playBC();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/ur ded/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playDed();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/i will send you to jesus/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playDed();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/youre ded/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playDed();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/you're ded/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playDed();
@@ -324,7 +464,27 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/wth/gmi || /what the hell/gmi || /what the hail/gmi) || []).length;
+						const count = (message.content.match(/stoobid/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playStupid();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/wth/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playWTH();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/what the hell/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playWTH();
