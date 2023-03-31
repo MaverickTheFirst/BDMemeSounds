@@ -183,7 +183,7 @@ module.exports = (() => {
 						}
 					}
 
-					if (!optimistic) {
+					/*if (!optimistic) {
 						const count = (message.content.match(/h?oyah/gmi) || []).length;
 
 						for (let i = 0; i < count; i++) {
@@ -191,7 +191,7 @@ module.exports = (() => {
 
 							await new Promise(r => setTimeout(r, this.settings.general.delay));
 						}
-					}
+					}*/
 
 					if (!optimistic) {
 						const count = (message.content.match(/sigma/gmi) || []).length;
@@ -634,10 +634,10 @@ module.exports = (() => {
 					audio.play();
 				}
 
-				playHOYAH() {
+				/*playHOYAH() {
 					audio.src = "https://www.myinstants.com/media/sounds/hooyahh.mp3";
 					audio.play();
-				}
+				}*/
 
 				playSigma() {
 					audio.src = "https://www.myinstants.com/media/sounds/sigmamusic.mp3";
