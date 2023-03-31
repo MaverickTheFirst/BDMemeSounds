@@ -76,7 +76,7 @@ module.exports = (() => {
 
 			const audio = new Audio();
 
-			return class Bruh extends Plugin {
+			return class MemeSounds extends Plugin {
 				constructor() {
 					super();
 				}
@@ -168,6 +168,26 @@ module.exports = (() => {
 				
 						for (let i = 0; i < count; i++) {
 							this.playNice();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/sigma/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playSigma();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/chad/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playChad();
 
 							await new Promise(r => setTimeout(r, this.settings.general.delay));
 						}
@@ -586,6 +606,16 @@ module.exports = (() => {
 
 				playNice() {
 					audio.src = "https://www.myinstants.com/media/sounds/nioce.mp3";
+					audio.play();
+				}
+
+				playSigma() {
+					audio.src = "https://www.myinstants.com/media/sounds/sigmamusic.mp3";
+					audio.play();
+				}
+
+				playChad() {
+					audio.src = "https://www.myinstants.com/media/sounds/original-giga-chad-theme.mp3";
 					audio.play();
 				}
 
