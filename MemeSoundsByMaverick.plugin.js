@@ -164,7 +164,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/Nice/gmi) || []).length;
+						const count = (message.content.match(/No?ice/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playNice();
@@ -194,7 +194,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/Nope/gmi) || []).length;
+						const count = (message.content.match(/nope/gmi || /no/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playNope();
@@ -214,7 +214,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/lol/gmi) || []).length;
+						const count = (message.content.match(/lol/gmi || /lmao/gmi || /😂/gmi || /😭/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playLol();
@@ -238,6 +238,36 @@ module.exports = (() => {
 			
 						for (let i = 0; i < count; i++) {
 							this.playBye();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/dead chat/gmi || /ded chat/gmi || /chat ded/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playCrickets();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/😑/gmi || /🗿/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playVineBoom();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/oof/gmi || /uff/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playOof();
 
 							await new Promise(r => setTimeout(r, this.settings.general.delay));
 						}
@@ -290,7 +320,7 @@ module.exports = (() => {
 				}
 
 				playNice() {
-					audio.src = "https://www.myinstants.com/media/sounds/-click-nice_3_2QRHvUS.mp3";
+					audio.src = "https://www.myinstants.com/media/sounds/nioce.mp3";
 					audio.play();
 				}
 
@@ -326,6 +356,21 @@ module.exports = (() => {
 
 				playBye() {
 					audio.src = "https://www.myinstants.com/media/sounds/bye-have-a-great-time.mp3";
+					audio.play();
+				}
+
+				playCrickets() {
+					audio.src = "https://www.myinstants.com/media/sounds/awkward-cricket-sound-effect.mp3";
+					audio.play();
+				}
+
+				playOof() {
+					audio.src = "https://www.myinstants.com/media/sounds/roblox-death-sound_1.mp3";
+					audio.play();
+				}
+
+				playVineBoom() {
+					audio.src = "https://www.myinstants.com/media/sounds/vine-boom.mp3";
 					audio.play();
 				}
 
