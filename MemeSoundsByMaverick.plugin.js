@@ -1,27 +1,24 @@
 /**
- * @name Bruh
+ * @name MemeSoundsByMaverick
  * @invite yNqzuJa
- * @authorLink https://github.com/Metalloriff
- * @donate https://www.paypal.me/israelboone
- * @website https://metalloriff.github.io/toms-discord-stuff/
- * @source https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/Bruh.plugin.js
+ * @authorLink https://github.com/MaverickTheFirst
+ * @source https://github.com/MaverickTheFirst/MemeSoundsByMaverick/blob/main/MemeSoundsByMaverick.plugin.js
  */
 
 module.exports = (() => {
 	const config =
 	{
 		info: {
-			name: "Bruh",
+			name: "MemeSoundsByMaverick",
 			authors: [{
-				name: "Metalloriff",
-				discord_id: "264163473179672576",
-				github_username: "metalloriff",
-				twitter_username: "Metalloriff"
+				name: "Maverick",
+				discord_id: "845712972106039357",
+				github_username: "MaverickTheFirst"
 			}],
-			version: "0.0.2",
-			description: "bruh",
-			github: "https://github.com/Metalloriff/BetterDiscordPlugins/blob/master/Bruh.plugin.js",
-			github_raw: "https://raw.githubusercontent.com/Metalloriff/BetterDiscordPlugins/master/Bruh.plugin.js"
+			version: "1.0",
+			description: "When the plugin is enabled, meme sounds will play based on what is being sent in chat! Contains an extensive library of meme sounds.",
+			github: "https://github.com/MaverickTheFirst/BDMemeSounds/blob/main/MemeSoundsByMaverick.plugin.js",
+			github_raw: "https://raw.githubusercontent.com/MaverickTheFirst/BDMemeSounds/main/MemeSoundsByMaverick.plugin.js"
 		},
 		defaultConfig: [{
 			id: "general",
@@ -32,13 +29,13 @@ module.exports = (() => {
 			settings: [{
 				id: "onlyCur",
 				name: "Current channel only",
-				note: "When this is enabled, the bruh sound effect will only play when a bruh is found in the selected channel.",
+				note: "MEME SOUNDS",
 				type: "switch",
 				value: true
 			}, {
 				id: "delay",
-				name: "Delay between each bruh (ms)",
-				note: "The amount of milliseconds to wait between each bruh when multiple bruhs are found within the same message.",
+				name: "Delay between each sounds (ms)",
+				note: "The amount of milliseconds to wait between each bruh when multiple sounds are found within the same message.",
 				type: "slider",
 				value: 200,
 				min: 10,
@@ -105,13 +102,238 @@ module.exports = (() => {
 							await new Promise(r => setTimeout(r, this.settings.general.delay));
 						}
 					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/damn/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playDamn();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/sed/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playED();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/keliye debo/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playRUN();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/bazinga/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playBazinga();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/sus/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playSus();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/😎/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playJohnCena();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Nice/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playNice();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Hehe/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playHehe();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Sui/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playSui();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Nope/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playNope();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/respect/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playRespect();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/lol/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playLol();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/lmfao/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playLmfao();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Bye/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playBye();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Goodnight/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playOutro();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
 				};
 				
 				playBruh() {
 					audio.src = "https://www.myinstants.com/media/sounds/movie_1.mp3";
 					audio.play();
 				}
+
+				playDamn() {
+					audio.src = "https://www.myinstants.com/media/sounds/god-damn-1.mp3";
+					audio.play();
+				}
+
+				playED() {
+					audio.src = "https://www.myinstants.com/media/sounds/emotional-damage-meme.mp3";
+					audio.play();
+				}
 				
+				playRUN() {
+					audio.src = "https://www.myinstants.com/media/sounds/run-vine-sound-effect.mp3";
+					audio.play();
+				}
+
+				playBazinga() {
+					audio.src = "https://www.myinstants.com/media/sounds/bazinga.swf.mp3";
+					audio.play();
+				}
+
+				playSus() {
+					audio.src = "https://www.myinstants.com/media/sounds/among.mp3";
+					audio.play();
+				}
+
+				playJohnCena() {
+					audio.src = "https://www.myinstants.com/media/sounds/and-his-name-is-john-cena-1.mp3";
+					audio.play();
+				}
+
+				playNice() {
+					audio.src = "https://www.myinstants.com/media/sounds/-click-nice_3_2QRHvUS.mp3";
+					audio.play();
+				}
+
+				playHehe() {
+					audio.src = "https://www.myinstants.com/media/sounds/ainsley_harriott_and_his_spicy_meatconverttoaudio.mp3";
+					audio.play();
+				}
+
+				playSui() {
+					audio.src = "https://www.myinstants.com/media/sounds/suuuuuuuuuuuuu.mp3";
+					audio.play();
+				}
+
+				playNope() {
+					audio.src = "https://www.myinstants.com/media/sounds/engineer_no01_1.mp3";
+					audio.play();
+				}
+
+				playRespect() {
+					audio.src = "https://www.myinstants.com/media/sounds/tmpbxydyrz3.mp3";
+					audio.play();
+				}
+
+				playLol() {
+					audio.src = "https://www.myinstants.com/media/sounds/baby-laughing-meme.mp3";
+					audio.play();
+				}
+
+				playLmfao() {
+					audio.src = "https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3";
+					audio.play();
+				}
+
+				playBye() {
+					audio.src = "https://www.myinstants.com/media/sounds/bye-have-a-great-time.mp3";
+					audio.play();
+				}
+
+				playOutro() {
+					audio.src = "https://www.myinstants.com/media/sounds/outro-song_oqu8zAg.mp3";
+					audio.play();
+				}
+
 				onStop() {
 					Dispatcher.unsubscribe("MESSAGE_CREATE", this.messageEvent);
 				}
