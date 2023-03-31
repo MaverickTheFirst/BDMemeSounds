@@ -334,7 +334,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/😑/gmi || /🗿/gmi) || []).length;
+						const count = (message.content.match(/😑/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playVineBoom();
@@ -354,7 +354,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/oof/gmi || /uff/gmi) || []).length;
+						const count = (message.content.match(/oof/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playOof();
@@ -474,7 +474,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/stupid/gmi || /stoobid/gmi) || []).length;
+						const count = (message.content.match(/stupid/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
 							this.playStupid();
@@ -518,6 +518,16 @@ module.exports = (() => {
 			
 						for (let i = 0; i < count; i++) {
 							this.playWTF();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/cancel/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playCancel();
 
 							await new Promise(r => setTimeout(r, this.settings.general.delay));
 						}
@@ -666,6 +676,11 @@ module.exports = (() => {
 
 				playVineBoom() {
 					audio.src = "https://www.myinstants.com/media/sounds/vine-boom.mp3";
+					audio.play();
+				}
+
+				playCancel() {
+					audio.src = "";
 					audio.play();
 				}
 
