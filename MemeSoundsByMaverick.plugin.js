@@ -174,7 +174,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/?fucked? up/gmi) || []).length;
+						const count = (message.content.match(/fucked? up/gmi) || []).length;
 
 						for (let i = 0; i < count; i++) {
 							this.playFuckedUp();
@@ -184,7 +184,7 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/h?oy?ah/gmi) || []).length;
+						const count = (message.content.match(/h?oyah/gmi) || []).length;
 
 						for (let i = 0; i < count; i++) {
 							this.playHOYAH();
