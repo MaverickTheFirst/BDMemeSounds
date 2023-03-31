@@ -244,16 +244,6 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/no/gmi) || []).length;
-				
-						for (let i = 0; i < count; i++) {
-							this.playNope();
-
-							await new Promise(r => setTimeout(r, this.settings.general.delay));
-						}
-					}
-
-					if (!optimistic) {
 						const count = (message.content.match(/respect/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
