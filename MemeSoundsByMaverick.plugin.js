@@ -274,6 +274,76 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
+						const count = (message.content.match(/ah/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playAH();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/shit/gmi || /sh*t/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playSHIT();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/🍦/gmi || /🍧/gmi || /🍨/gmi || /ice cream/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playBC();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/ur ded/gmi || /i will send you to jesus/gmi || /youre ded/gmi || /you're ded/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playDed();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/stupid/gmi || /stoobid/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playStupid();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/wth/gmi || /what the hell/gmi || /what the hail/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playWTH();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/wtf/gmi) || []).length;
+			
+						for (let i = 0; i < count; i++) {
+							this.playWTF();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
 						const count = (message.content.match(/Goodnight/gmi) || []).length;
 			
 						for (let i = 0; i < count; i++) {
@@ -286,6 +356,41 @@ module.exports = (() => {
 				
 				playBruh() {
 					audio.src = "https://www.myinstants.com/media/sounds/movie_1.mp3";
+					audio.play();
+				}
+
+				playAH() {
+					audio.src = "https://www.myinstants.com/media/sounds/haaaaaaaa.mp3";
+					audio.play();
+				}
+
+				playSHIT() {
+					audio.src = "https://www.myinstants.com/media/sounds/oh-shit_4.mp3";
+					audio.play();
+				}
+
+				playBC() {
+					audio.src = "https://www.myinstants.com/media/sounds/bing-chilling_fcdGgUc.mp3";
+					audio.play();
+				}
+
+				playDed() {
+					audio.src = "https://www.myinstants.com/media/sounds/i-will-send-you-to-jesus-steven-he.mp3";
+					audio.play();
+				}
+
+				playStupid() {
+					audio.src = "https://www.myinstants.com/media/sounds/steven-he-stupid.mp3";
+					audio.play();
+				}
+
+				playWTH() {
+					audio.src = "https://www.myinstants.com/media/sounds/what-the-hail-you-say-steven-he.mp3";
+					audio.play();
+				}
+
+				playWTF() {
+					audio.src = "https://www.myinstants.com/media/sounds/jontron-what_K9mOgXd.mp3";
 					audio.play();
 				}
 
