@@ -114,7 +114,17 @@ module.exports = (() => {
 					}
 
 					if (!optimistic) {
-						const count = (message.content.match(/sed/gmi) || []).length;
+						const count = (message.content.match(/sedlyf/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playED();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/sad/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playED();
@@ -165,6 +175,16 @@ module.exports = (() => {
 
 					if (!optimistic) {
 						const count = (message.content.match(/No?ice/gmi) || []).length;
+				
+						for (let i = 0; i < count; i++) {
+							this.playNice();
+
+							await new Promise(r => setTimeout(r, this.settings.general.delay));
+						}
+					}
+
+					if (!optimistic) {
+						const count = (message.content.match(/Nais/gmi) || []).length;
 				
 						for (let i = 0; i < count; i++) {
 							this.playNice();
